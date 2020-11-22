@@ -1,7 +1,7 @@
 from typing import NoReturn
 
-from X import X
-from algebra import Vector, Scalar, vector
+from utils.X import X
+from utils.algebra import Vector, Scalar, vector
 
 
 class Model:

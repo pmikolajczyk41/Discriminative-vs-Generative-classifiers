@@ -3,7 +3,7 @@ from itertools import cycle
 from operator import sub
 from typing import Optional, Tuple
 
-from algebra import Vector
+from utils.algebra import Vector
 
 
 class StopConditions:

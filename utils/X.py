@@ -1,6 +1,6 @@
 from itertools import repeat
 
-from algebra import Matrix, vector
+from utils.algebra import Matrix, vector
 
 
 class X:
