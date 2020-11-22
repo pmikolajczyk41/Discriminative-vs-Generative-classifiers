@@ -35,9 +35,3 @@ def sum_vv(u: Vector, v: Vector) -> Vector:
 def diff_vv(u: Vector, v: Vector) -> Vector:
     assert len(u) == len(v)
     return vector(map(lambda x: sub(*x), zip(u, v)))
-
-
-def signum(x: float) -> float:
-    if x < 0.: return -1.
-    if x > 0.: return 1.
-    return x
