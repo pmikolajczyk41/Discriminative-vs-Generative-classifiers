@@ -1,20 +1,15 @@
-from typing import Callable
+from typing import NoReturn
 
 from X import X
-from algebra import Vector
-
-
-class Hypothesis:
-    @classmethod
-    def from_func(cls, fun: Callable[[X], Vector]) -> 'Hypothesis':
-        h = Hypothesis()
-        h.predict = fun
-        return h
-
-    def predict(self, x: X) -> Vector:
-        raise NotImplementedError
+from algebra import Vector, Scalar, vector
 
 
 class Model:
-    def train(self, x: X, y: Vector) -> Hypothesis:
+    def train(self, x: X, y: Vector) -> NoReturn:
+        raise NotImplementedError
+
+    def predict(self, x: X) -> Vector:
+        return vector(map(lambda xi: self._predict_one(xi), x.by_sample()))
+
+    def _predict_one(self, x: Vector) -> Scalar:
         raise NotImplementedError
